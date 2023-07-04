@@ -23,8 +23,7 @@ public class main {
         builder.setStatus(OnlineStatus.ONLINE);
         builder.setActivity(Activity.playing(status));
         builder.enableIntents(GatewayIntent.GUILD_MEMBERS, GatewayIntent.GUILD_MESSAGES);
-        builder.addEventListeners(new memes(), new support(), new welcome(), new commands(), new contextMenu(),
-                new commandRegister());
+        builder.addEventListeners(new commands(), new contextMenu(), new commandRegister());
         shardManager = builder.build();
     }
 
@@ -35,7 +34,7 @@ public class main {
     public static void main(String[] args) {
         try {
             main bot = new main();
-            System.out.println("SUCCESS: The LXBS Support Bot is now online");
+            System.out.println("SUCCESS: The LXBS Minecraft Bot is now online");
         } catch (LoginException exception) {
             System.out.println("ERROR: Provided bot token is invalid");
         }
